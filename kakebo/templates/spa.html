@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kakebo SPA</title>
+    <link rel="stylesheet" href="/static/css/milligram.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <script src="/static/js/spa.js"></script> <!--ponemos/ al principio te lleva al principio-->
+</head>
+<body>
+    <header>Kakebo 2.0</header>
+    <section class="container" id="principal">
+        <h1>Control de movimientos</h1>
+        <div class="lista_movimientos">
+            <table class="tabla-movimientos">
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Concepto</th>
+                        <th>Tipo</th>
+                        <th>Categoria</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </section>
+    <hr>
+    <div class="detalle-movimiento container">
+        <form>
+            <div class="row">
+                <div class="column">
+                    <label for="fecha">Fecha</label>
+                    <input type="date" name="fecha" id="fecha">
+                </div>
+                <div class="column column-75">
+                    <label for="concepto">Concepto</label>
+                    <input type="text" name="concepto" id="concepto">
+                </div>
+            </div>
+            <div class="row">
+                <div class="column column-33"> <!-- el 33 es el porcetaje, para que quede bonito-->
+                    <label for="esGasto">Tipo</label>
+                    <input type="radio" name="esGasto" id="gasto" value="1">Gasto
+                    <input type="radio" name="esGasto" id="ingreso" value="0">Ingreso
+                </div>
+                <div class="column column-33">
+                    <label for="categoria">Categoria</label>
+                    <select name="categoria" id="categoria">
+                        <option value="">No procede</option>
+                        <option value="SU">Supervivencia</option>
+                        <option value="CU">Cultura</option>
+                        <option value="OV">Ocio/Vicio</option>
+                        <option value="EX">Extras</option>
+                    </select>
+                </div>
+                <div class="column column-33">
+                    <label for="cantidad">Cantidad</label>
+                    <input type="number" name="cantidad" id="cantidad" step="any"> <!--numeber solo cpge valores enteros. Por eso ponemos el any, es decir, cualquiera-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <button id="modificar">Modificar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer>&copy 2021</footer>
+
+    
+</body>
+</html>
